@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1342" role="img" aria-label="Modulo BF3 tinta Legno scuro">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7B5634"/><stop offset="1" stop-color="#634427"/></linearGradient>
+<linearGradient id="al" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#868B8A"/><stop offset=".45" stop-color="#9FA4A3"/><stop offset="1" stop-color="#868B8A"/></linearGradient>
+</defs>
+<rect x="55" y="60" width="890" height="410" fill="url(#g)"/>
+<rect x="75" y="142" width="850" height="2" fill="#8C6540" opacity=".55"/>
+<rect x="75" y="224" width="850" height="2" fill="#8C6540" opacity=".55"/>
+<rect x="75" y="306" width="850" height="2" fill="#8C6540" opacity=".55"/>
+<rect x="75" y="388" width="850" height="2" fill="#8C6540" opacity=".55"/>
+<rect x="55" y="476" width="890" height="410" fill="url(#g)"/>
+<rect x="75" y="558" width="850" height="2" fill="#8C6540" opacity=".55"/>
+<rect x="75" y="640" width="850" height="2" fill="#8C6540" opacity=".55"/>
+<rect x="75" y="722" width="850" height="2" fill="#8C6540" opacity=".55"/>
+<rect x="75" y="804" width="850" height="2" fill="#8C6540" opacity=".55"/>
+<rect x="55" y="892" width="890" height="410" fill="url(#g)"/>
+<rect x="75" y="974" width="850" height="2" fill="#8C6540" opacity=".55"/>
+<rect x="75" y="1056" width="850" height="2" fill="#8C6540" opacity=".55"/>
+<rect x="75" y="1138" width="850" height="2" fill="#8C6540" opacity=".55"/>
+<rect x="75" y="1220" width="850" height="2" fill="#8C6540" opacity=".55"/>
+<rect x="0" y="50" width="55" height="1274" fill="url(#al)"/>
+<rect x="945" y="50" width="55" height="1274" fill="url(#al)"/>
+<rect x="0" y="1324" width="85" height="18" rx="3" fill="#868B8A"/>
+<rect x="915" y="1324" width="85" height="18" rx="3" fill="#868B8A"/>
+<rect x="-6" y="0" width="1012" height="42" rx="21" fill="#B9BEBD"/>
+<rect x="-6" y="6" width="1012" height="10" rx="5" fill="#FFFFFF" opacity=".45"/>
+</svg>

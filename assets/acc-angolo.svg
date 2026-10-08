@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Kit angolo a 90 gradi">
+  <rect x="18" y="40" width="46" height="26" fill="#C6C9C5"/>
+  <rect x="18" y="70" width="46" height="26" fill="#C6C9C5"/>
+  <rect x="54" y="40" width="20" height="56" fill="#9FA4A3"/>
+  <rect x="74" y="40" width="28" height="26" fill="#AEB2AE"/>
+  <rect x="74" y="70" width="28" height="26" fill="#AEB2AE"/>
+  <path d="M74 32 h20 v8" fill="none" stroke="#5E6E55" stroke-width="3"/>
+  <path d="M54 32 h-8" fill="none" stroke="#5E6E55" stroke-width="3"/>
+</svg>
