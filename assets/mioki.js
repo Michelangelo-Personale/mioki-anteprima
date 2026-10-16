@@ -202,20 +202,7 @@
         b.addEventListener('click', function () {
           bottoni.forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
           b.setAttribute('aria-pressed', 'true');
-          var main = qs('[data-galleria-main]');
-          var modello = gruppo.dataset.modello;
-          var url = (window.MIOKI_PANNELLI || {})[modello + '-' + b.dataset.tinta];
-          var miniDisegno = qs('[data-mini-disegno]');
-          if (url && miniDisegno) {
-            // la foto resta in evidenza: la tinta aggiorna il disegno del modulo
-            miniDisegno.dataset.src = url;
-            qs('img', miniDisegno).src = url;
-            if (miniDisegno.getAttribute('aria-current') === 'true' && main) {
-              main.innerHTML = '<img src="' + url + '" alt="Modulo ' + modello + '">';
-            }
-          } else if (main && url) {
-            main.innerHTML = '<img src="' + url + '" alt="Modulo ' + modello + '">';
-          }
+          // il disegno tecnico è fisso: la tinta aggiorna solo l'etichetta
           qsa('[data-tinta-scelta]').forEach(function (el) { el.textContent = b.dataset.nome; });
         });
       });
