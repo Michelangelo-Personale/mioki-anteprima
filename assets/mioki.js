@@ -248,6 +248,14 @@
   }
 
   /* ---------- pagina carrello ---------- */
+  /* le righe salvate nel browser prima del 16/10 puntano al vecchio vettoriale:
+     se c'è il disegno tecnico del modello, vale quello */
+  function immagineRiga(r) {
+    var disegno = r.modello && (window.MIOKI_DISEGNI || {})[r.modello];
+    if (disegno && (!r.immagine || r.immagine.indexOf('pannello-') !== -1)) return disegno;
+    return r.immagine || '';
+  }
+
   function initPaginaCarrello() {
     var contenitore = qs('[data-righe-carrello]');
     if (!contenitore) return;
@@ -270,7 +278,7 @@
       contenitore.innerHTML = righe.map(function (r, i) {
         var pz = prezzoEffettivo(r.prezzo);
         return '<div class="riga-carrello">' +
-          '<div class="mini"><img src="' + r.immagine + '" alt=""></div>' +
+          '<div class="mini"><img src="' + immagineRiga(r) + '" alt=""></div>' +
           '<div><h4>' + r.titolo + '</h4>' +
           (r.tinta ? '<div class="meta">Tinta: ' + r.tinta + '</div>' : '') +
           '<div class="meta">' + r.qta + ' × ' + euro(pz) + '</div>' +

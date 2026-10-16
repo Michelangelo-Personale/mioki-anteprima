@@ -66,12 +66,11 @@
         : 'Ti mancano ' + euro(SOGLIA_SPEDIZIONE - totale) + ' per la spedizione gratuita.';
     }
 
-    // anteprima del modulo nella tinta scelta
+    // anteprima: il disegno tecnico del modello scelto (la tinta non cambia il disegno)
     var ante = box.querySelector('[data-calc-anteprima]');
     if (ante) {
-      var t = tintaScelta();
-      var url = (window.MIOKI_PANNELLI || {})[selModello.value + '-' + t.id];
-      if (url) ante.innerHTML = '<img src="' + url + '" alt="Modulo ' + mod.nome + ' tinta ' + t.nome + '">';
+      var url = (window.MIOKI_DISEGNI || {})[selModello.value];
+      if (url) ante.innerHTML = '<img src="' + url + '" alt="Disegno del modulo ' + mod.nome + '">';
     }
 
     // dati pronti per il bottone "aggiungi tutto al carrello"
@@ -116,7 +115,7 @@
       C.aggiungi({
         handle: p.modello, titolo: p.nome, prezzo: p.prezzoUnit, qta: p.moduli,
         tinta: p.tinta, modello: p.modello,
-        immagine: (window.MIOKI_PANNELLI || {})[p.modello + '-' + (tintaScelta().id || 'grigio-chiaro')] || ''
+        immagine: (window.MIOKI_DISEGNI || {})[p.modello] || ''
       });
       C.aggiungi({
         handle: 'montante-supplementare', titolo: 'Montante supplementare',
