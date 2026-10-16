@@ -188,6 +188,7 @@
       b.addEventListener('click', function () {
         qsa('[data-galleria-mini] button').forEach(function (x) { x.setAttribute('aria-current', 'false'); });
         b.setAttribute('aria-current', 'true');
+        main.classList.toggle('con-foto', b.classList.contains('con-foto'));
         main.innerHTML = '<img src="' + b.dataset.src + '" alt="' + (b.dataset.alt || '') + '">';
       });
     });
@@ -204,7 +205,15 @@
           var main = qs('[data-galleria-main]');
           var modello = gruppo.dataset.modello;
           var url = (window.MIOKI_PANNELLI || {})[modello + '-' + b.dataset.tinta];
-          if (main && url) {
+          var miniDisegno = qs('[data-mini-disegno]');
+          if (url && miniDisegno) {
+            // la foto resta in evidenza: la tinta aggiorna il disegno del modulo
+            miniDisegno.dataset.src = url;
+            qs('img', miniDisegno).src = url;
+            if (miniDisegno.getAttribute('aria-current') === 'true' && main) {
+              main.innerHTML = '<img src="' + url + '" alt="Modulo ' + modello + '">';
+            }
+          } else if (main && url) {
             main.innerHTML = '<img src="' + url + '" alt="Modulo ' + modello + '">';
           }
           qsa('[data-tinta-scelta]').forEach(function (el) { el.textContent = b.dataset.nome; });
